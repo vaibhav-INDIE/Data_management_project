@@ -29,6 +29,13 @@ if e not in routes[n] and e != n:
                 if e in routes[j] and j != n:
                     print(n,"-",i,"-",j,"-",e)
 
+if e not in routes[n] and e != n:
+    for i in routes[n]:
+        if e in routes[i]:
+            for j in routes[i]:
+                if e in routes[j] and j != n:
+                    print(n,"-",i,"-",j,"-",e)
+
 
 if e not in routes[n] and e != n:
     for i in routes[n]:
@@ -38,6 +45,20 @@ if e not in routes[n] and e != n:
                     for k in routes[j]:
                         if e in routes[k] and j != n:
                             print(n,"-",i,"-",j,"-",k,"-",e)
+
+if e not in routes[n] and e != n:
+    for i in routes[n]:
+        if e not in routes[i]:
+            for j in routes[i]:
+                if e in routes[j]:
+                    for k in routes[j]:
+                        if e in routes[k] and j != n:
+                            print(n,"-",i,"-",j,"-",k,"-",e)
+
+
+
+
+
 
 if n == "5" and e == "6" :
     print(5,"-",4,"-",3,"-",2,"-",1,"-",6)
